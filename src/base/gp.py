@@ -15,8 +15,8 @@ import numpy as np
 
 class GeneticProgrammingSymbolRegression:
     """
-    GeneticProgramming
-    ------------------
+    GeneticProgrammingSymbolRegression
+    ----------------------------------
 
     Реализация алгоритма генетического программирования для задачи регрессии
 

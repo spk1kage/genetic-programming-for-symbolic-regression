@@ -4,23 +4,20 @@ import numpy as np
 
 if __name__ == "__main__":
 
-    def fitness_function(x):
-        return np.sin(3 * x[:, 0]) * x[:, 0] * 0.5
-        # return np.sin(x[:, 0])
+    def function(x):
+        return np.sin(3 * x) * x * 0.5
+        # return np.sin(x)
 
-
-    n_dimension = 1
     left_border = -4.5
     right_border = 4.5
     sample_size = 100
 
-    x = np.array([np.linspace(left_border, right_border, sample_size)
-                  for _ in range(n_dimension)]).T
-    y = fitness_function(x)
+    x = np.linspace(left_border, right_border, sample_size)
+    y = function(x)
 
     gp = GP(
         n_iters=500,
-        pop_size=100,
+        pop_size=50,
         elitism=None,
         max_depth=5,
         limit_depth=8,
@@ -38,12 +35,12 @@ if __name__ == "__main__":
         random_state=None
     )
 
-    ind = gp.fit(x[:, 0], y)
+    ind = gp.fit(x, y)
     y_pred = ind.genotype() * np.ones(sample_size)
 
     fig, ax = plt.subplots(figsize=(15, 8), ncols=2, nrows=1)
-    ax[0].plot(x[:, 0], y, label="True y")
-    ax[0].plot(x[:, 0], y_pred, label="Predict y")
+    ax[0].plot(x, y, label="True y")
+    ax[0].plot(x, y_pred, label="Predict y")
     ax[0].legend()
 
     ind.plot(ax=ax[1])
