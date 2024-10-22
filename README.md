@@ -18,7 +18,8 @@ pip install numpy==1.25.2 networkx==3.4.2
 ```
 
 ## Example
-Below is an example usage of the `GeneticProgrammingSymbolRegression` class, which tries to grow the function `f(x) = sin(3 * x) * x * 0.5`
+Below is an example usage of the `GeneticProgrammingSymbolRegression` class, which tries to grow the function `f(x) = sin(3 * x) * x * 0.5`.
+You can find a complete example in [`example.py`](example.py). Here's a quick overview of how to use the library:
 
 ```python
 from src.base.gp import GeneticProgrammingSymbolRegression as GP
