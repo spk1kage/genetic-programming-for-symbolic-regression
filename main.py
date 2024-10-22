@@ -30,7 +30,7 @@ if __name__ == "__main__":
         mutation_rate=0.45,
         is_const_mut_rate=True,
         is_logging=False,
-        show_progress_each=10,
+        show_progress_each=50,
         termination=150,
         random_state=None
     )
