@@ -4,6 +4,21 @@ This project is my first attempt at implementing an evolutionary algorithm using
 The algorithm is designed to solve a symbolic regression problem by evolving mathematical expressions over generations. 
 It applies selection, crossover, and mutation operations to evolve increasingly accurate models.
 
+## Algorithm Description
+This implementation is based on the genetic programming algorithm described in:
+> Koza, J.R. (1992). Genetic Programming: On the Programming of Computers by Means of Natural Selection. MIT Press.
+
+The algorithm follows the standard genetic programming approach with:
+- Tree-based representation of mathematical expressions
+- Selection methods for parent choice
+- Subtree crossover for genetic material exchange
+- Point and subtree mutation for introducing variation
+- Ramped half-and-half initialization for diverse initial population
+
+For more details on genetic programming and symbolic regression, see:
+- [Genetic programming: An introduction and survey of applications](https://www.researchgate.net/publication/3751687_Genetic_programming_An_introduction_and_survey_of_applications)
+- [Symbolic regression](https://en.wikipedia.org/wiki/Symbolic_regression)
+
 ## Dependencies
 
 The algorithm is written in [Python 3.11.4](https://www.python.org/) and relies on the following libraries:
